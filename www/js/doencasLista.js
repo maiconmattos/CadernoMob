@@ -25,7 +25,7 @@ var modoDoencaForm="";
 	function listarMonitoresDoenca() {
 		$.ajax({
 			type : 'GET',
-			url : rootURL + 'DoencaMonitor/' + cadernoSelecionado.id,
+			url : rootURL + 'DoencaMonitor/' + cadernoSelecionado.id + cacheBuster,
 			dataType : "json",
 			success : renderlistaMonitoresDoenca
 		});

@@ -11,7 +11,7 @@
 	function listarCadernos() {
 		$.ajax({
 			type : 'GET',
-			url : rootURL + 'CadernoCampo',
+			url : rootURL + 'CadernoCampo' + cacheBuster,
 			dataType : "json",
 			success : renderlistaCaderno
 		});

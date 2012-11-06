@@ -43,7 +43,7 @@
 	function deleteMonitorDoenca(idToRemove) {
 		$.ajax({
 			type : 'DELETE',
-			url : rootURL + 'DoencaMonitor/' + idToRemove,
+			url : rootURL + 'DoencaMonitor/' + idToRemove + cacheBuster,
 			dataType : "json",
 			success : deleteDoencaSuccess
 		});
@@ -114,7 +114,7 @@
 			$.ajax({
 				type : 'POST',
 				contentType: 'application/json',
-				url : rootURL + 'DoencaMonitor',
+				url : rootURL + 'DoencaMonitor' + cacheBuster,
 				data : formDoencaToJSON(),
 				dataType : "json",
 				success : saveDoencaSuccess
@@ -134,7 +134,7 @@
 	function popularPragasDoenca() {
 		$.ajax({
 			type : 'GET',
-			url : rootURL + 'Praga',
+			url : rootURL + 'Praga' + cacheBuster,
 			dataType : "json",
 			success : renderComboPragasDoenca
 		});
@@ -143,7 +143,7 @@
 	function popularEstadiosTrigoDoenca() {
 		$.ajax({
 			type : 'GET',
-			url : rootURL + 'EstadioTrigo',
+			url : rootURL + 'EstadioTrigo' + cacheBuster,
 			dataType : "json",
 			success : renderComboEstadiosTrigoDoenca
 		});

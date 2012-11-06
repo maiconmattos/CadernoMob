@@ -2,6 +2,7 @@ var server = '';
 var rootURL = '';
 var cadernoSelecionado= '';
 var scroll = undefined;
+var cacheBuster = "?timeStamp=" + new Date();
 
 var MODO_EDICAO = "MODO_EDICAO";
 var MODO_INCLUSAO = "MODO_INCLUSAO";

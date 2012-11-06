@@ -25,7 +25,7 @@ var modoPragaForm="";
 	function listarMonitoresPraga() {
 		$.ajax({
 			type : 'GET',
-			url : rootURL + 'InsetoMonitor/' + cadernoSelecionado.id,
+			url : rootURL + 'InsetoMonitor/' + cadernoSelecionado.id + cacheBuster,
 			dataType : "json",
 			success : renderlistaMonitoresPraga
 		});

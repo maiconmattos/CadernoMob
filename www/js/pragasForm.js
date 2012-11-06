@@ -43,7 +43,7 @@
 	function deleteMonitorPraga(idToRemove) {
 		$.ajax({
 			type : 'DELETE',
-			url : rootURL + 'InsetoMonitor/' + idToRemove,
+			url : rootURL + 'InsetoMonitor/' + idToRemove + cacheBuster,
 			dataType : "json",
 			success : deletePragaSuccess
 		});
@@ -114,7 +114,7 @@
 			$.ajax({
 				type : 'POST',
 				contentType: 'application/json',
-				url : rootURL + 'InsetoMonitor',
+				url : rootURL + 'InsetoMonitor' + cacheBuster,
 				data : formPragaToJSON(),
 				dataType : "json",
 				success : savePragaSuccess
@@ -134,7 +134,7 @@
 	function popularPragasPraga() {
 		$.ajax({
 			type : 'GET',
-			url : rootURL + 'Praga',
+			url : rootURL + 'Praga' + cacheBuster,
 			dataType : "json",
 			success : renderComboPragasPraga
 		});
@@ -143,7 +143,7 @@
 	function popularEstadiosTrigoPraga() {
 		$.ajax({
 			type : 'GET',
-			url : rootURL + 'EstadioTrigo',
+			url : rootURL + 'EstadioTrigo' + cacheBuster,
 			dataType : "json",
 			success : renderComboEstadiosTrigoPraga
 		});
