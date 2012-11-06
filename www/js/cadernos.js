@@ -1,5 +1,6 @@
 (function($){
 	$(document).on('pageshow','#cadernos', function() {
+		alert('show !');
 		setScroll('wrapper');
 		listarCadernos();
 	});
