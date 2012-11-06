@@ -34,7 +34,7 @@ function findAndSelectOption(selectId, modelId){
 (function($){
 	$(document).on('pageshow','#main', function() {
 		server = prompt("Server :","192.168.0.118");
-		rootURL = "http://" + server + ":8080/MosaicoMobile/"; 
+		rootURL = "http://" + server + ":8080/Caderno/"; 
 		$.mobile.changePage('login.html');
 	});
 })(jQuery);
