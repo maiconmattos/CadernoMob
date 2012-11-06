@@ -18,8 +18,8 @@
 			dataType : "json",
 			success : renderlistaCaderno,
 			error: function (xhr, ajaxOptions, thrownError) {
-				alert('xhr.status : ' xhr.status + "\n"
-					  'thrownError : ' thrownError);
+				alert('xhr.status : ' +  xhr.status + '\n' +
+					  'thrownError : ' + thrownError);
 		    }
 		});
 	}
