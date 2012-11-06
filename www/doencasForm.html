@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+</head>
+
+<body style="background-color: #FFFFFF">
+	<div id="doencas" data-role="page" data-cache="never">
+		<header class="fixed-header" data-role="header" data-position="fixed">
+			<a href="doencasLista.html" data-transition="slide" data-icon="back">Voltar</a>
+			<h1>Monitoramento de doenças</h1>
+			<a id="btnSaveDoenca" data-icon="check">Salvar</a>
+		</header>
+
+		<div id="content" data-role="content">
+			<form id="crud">
+				<input type="text" style="display: none;" id="hiddenId"> 
+				<label for="dtOcorrencia" class="lbl-dtOcorrencia">Data Ocorrência:</label>
+				<label for="qtdOcorrencia" class="lbl-qtdOcorrencia">Quantidade:</label> 
+				<input type="text" name="dtOcorrencia" id="dtOcorrencia" class="input-dtOcorrencia ui-input-text ui-body-c ui-corner-all ui-shadow-inset"> 
+				<input type="number" name="qtdOcorrencia" id="qtdOcorrencia" class="input-qtdOcorrencia ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+				
+				<label for="select-pragas" class="lbl-pragas">Pragas:</label> 
+				<select name="select-pragas" id="select-pragas">
+				</select>
+
+				<label for="select-responsaveis" class="lbl">Responsáveis:</label> 
+				<select name="select-responsaveis" id="select-responsaveis">
+				</select>
+				
+				<label for="select-estadio-trigo" class="lbl">Estádio trigo:</label> 
+				<select name="select-estadio-trigo" id="select-estadio-trigo">
+				</select>
+				
+				<a id="btn-excluir-doenca "class="btn-excluir" data-role="button">Excluir</a>		
+			</form>
+		</div>
+	</div>
+</body>
+</html>

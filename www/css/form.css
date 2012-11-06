@@ -1,0 +1,19 @@
+.input-qtdOcorrencia{
+	float: right !important;
+	width: 51% !important;
+}
+
+.input-dtOcorrencia{
+	float: left;
+	width: 48% !important;
+}
+
+.lbl-dtOcorrencia{
+	float: left;
+	width: 50%;
+}
+
+.lbl-pragas{
+	width: 20%;
+}
+
