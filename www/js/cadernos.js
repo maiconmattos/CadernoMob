@@ -9,11 +9,26 @@
 	});
 
 	function listarCadernos() {
+		navigator.notification.alert(
+			    'listando cadernos( ' + rootURL + 'CadernoCampo' + cacheBuster + ')',  // message
+			     null,//callback
+			    'Log !!!',            // title
+			    'OK'                  // buttonName
+			);
 		$.ajax({
 			type : 'GET',
 			url : rootURL + 'CadernoCampo' + cacheBuster,
 			dataType : "json",
-			success : renderlistaCaderno
+			success : renderlistaCaderno,
+			error: function (xhr, ajaxOptions, thrownError) {
+				navigator.notification.alert(
+					    'xhr.status : ' xhr.status + "\n"
+					    'thrownError : ' thrownError,  // message
+					     null,//callback
+					    'Log !!!',            // title
+					    'OK'                  // buttonName
+				);
+		    }
 		});
 	}
 	
