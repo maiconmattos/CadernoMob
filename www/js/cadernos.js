@@ -9,10 +9,10 @@
 	});
 
 	function listarCadernos() {
-		var sourceUrl = rootURL + 'CadernoCampo' + cacheBuster;
+		var sourceUrl = rootURL + 'CadernoCampo';
 		$.ajax({
 			type : 'GET',
-			url : sourceUrl,
+			url : sourceUrl  + cacheBuster,
 			dataType : "json",
 			success : renderlistaCaderno,
 			error: function (xhr, ajaxOptions, thrownError) {
