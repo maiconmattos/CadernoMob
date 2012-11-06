@@ -1,6 +1,5 @@
 (function($){
 	$(document).on('pageshow','#cadernos', function() {
-		alert('show !');
 		setScroll('wrapper');
 		listarCadernos();
 	});
@@ -10,16 +9,14 @@
 	});
 
 	function listarCadernos() {
-		alert('Ok !');
-		alert('listando cadernos( ' + rootURL + 'CadernoCampo' + cacheBuster + ')');
+		var sourceUrl = rootURL + 'CadernoCampo' + cacheBuster;
 		$.ajax({
 			type : 'GET',
-			url : rootURL + 'CadernoCampo' + cacheBuster,
+			url : sourceUrl,
 			dataType : "json",
 			success : renderlistaCaderno,
 			error: function (xhr, ajaxOptions, thrownError) {
-				alert('xhr.status : ' +  xhr.status + '\n' +
-					  'thrownError : ' + thrownError);
+				showErrorMessageREST(sourceUrl, xhr, thrownError);
 		    }
 		});
 	}

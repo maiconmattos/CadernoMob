@@ -7,6 +7,25 @@ var cacheBuster = '?timeStamp=' + new Date();
 var MODO_EDICAO = "MODO_EDICAO";
 var MODO_INCLUSAO = "MODO_INCLUSAO";
 
+function showErrorMessageREST(url, xhr, thrownError){
+	if (xhr.status == '404'){
+		navigator.notification.alert(
+			    'A URL ' + url + ' não foi encontrada.\n Entre em contato com o administrador do sistema.',  // message
+			     null,//callback
+			    'Erro !',            // title
+			    'OK'                  // buttonName
+			);
+	} else {
+		navigator.notification.alert(
+			'Ocorreu um erro ao acessar a URL ' + url + 'com a seguinte descrição : \n' + thrownError + 
+			'\n Entre em contato com o administrador do sistema.' ,  // message
+		     null,//callback
+		    'Erro !',            // title
+		    'OK'                  // buttonName
+		);
+	}
+}
+
 function dateToString(date){
 	var day = date.getDate();
 	var month = date.getMonth() + 1;
