@@ -19,7 +19,7 @@
 		}
 	}
 	
-	$(document).on('pageshow','#Plantas', function() {
+	$(document).on('pageshow','#plantas', function() {
 		if (modoPlantaForm == MODO_EDICAO){
 			JSONToFormPlanta(monitorPlantaSelecionado);
 			$('#btn-excluir-planta').css('display', 'block');
@@ -143,7 +143,7 @@
 		var options = [];
 		if (data && data.length) {
 			$.each(data, function(index, item) {
-				options.push('<option value="' + item.id + '">' + item.nome + '</option>');
+				options.push('<option value="' + item.id + '">' + item.nomeComercial + '</option>');
 			});
 			$("#select-produtos").append(options.join('')).selectmenu('refresh', true);
 			if (modoPlantaForm == MODO_EDICAO){
