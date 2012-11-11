@@ -51,7 +51,7 @@ var modoPlantaForm="";
 				'<li data-theme="c" class="li-item-planta" data-id="' + item.id + '">' +
 					'<a class="linkMonitorPlanta" href="plantasForm.html" data-transition="slide">' +
 						'<div> <span>' + 'Data:'        + '</span>  <span style="font-weight: normal">' + strDataOcorrenciaPlanta + '</span> </div>' +
-						'<div> <span>' + 'Agroquimico:'       + '</span>  <span style="font-weight: normal">' + item.produto.nome         + '</span> </div>' +
+						'<div> <span>' + 'Agroquimico:'       + '</span>  <span style="font-weight: normal">' + item.produto.nomeComercial         + '</span> </div>' +
 						'<div> <span>' + 'Dose:'     + '</span>  <span style="font-weight: normal">' + item.dose + '</span> </div>' +
 						'<div> <span>' + 'Responsável:' + '</span>  <span style="font-weight: normal">' + item.responsavel.nome   + '</span> </div>' +
                     '</a>'+

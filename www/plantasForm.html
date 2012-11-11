@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+</head>
+
+<body style="background-color: #FFFFFF">
+	<div id="plantas" data-role="page" data-cache="never">
+		<header class="fixed-header" data-role="header" data-position="fixed">
+			<a href="plantasLista.html" data-transition="slide" data-icon="back">Voltar</a>
+			<h1>Monitoramento de plantas</h1>
+			<a id="btnSavePlanta" data-icon="check">Salvar</a>
+		</header>
+
+		<div id="content" data-role="content">
+			<form id="crud">
+				<input type="text" style="display: none;" id="hiddenId"> 
+				<label for="dtOcorrencia" class="lbl-left">Data Ocorrência:</label>
+				<label for="dose" class="lbl-right">Dose:</label> 
+				<input type="text" name="dtOcorrencia" id="dtOcorrencia" class="input-left ui-input-text ui-body-c ui-corner-all ui-shadow-inset"> 
+				<input type="number" name="dose" id="dose" class="input-right ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+				
+				<label for="select-produtos" class="lbl-second-line">Agroquímicos:</label> 
+					<select name="select-produtos" id="select-produtos">
+				</select>
+
+				<label for="select-responsaveis" class="lbl">Responsáveis:</label> 
+					<select name="select-responsaveis" id="select-responsaveis">
+				</select>
+				
+				<a id="btn-excluir-planta" class="btn-excluir" data-role="button">Excluir</a>		
+			</form>
+		</div>
+	</div>
+</body>
+</html>
