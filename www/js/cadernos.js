@@ -9,7 +9,7 @@
 	});
 
 	function listarCadernos() {
-		var sourceUrl = rootURL + 'CadernoCampo';
+		var sourceUrl = rootURL + 'CadernoCampo/' + pessoaId;
 		$.ajax({
 			type : 'GET',
 			url : sourceUrl  + cacheBuster,

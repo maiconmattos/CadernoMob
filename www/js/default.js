@@ -3,6 +3,7 @@ var rootURL = '';
 var cadernoSelecionado= '';
 var scroll = undefined;
 var cacheBuster = '?timeStamp=' + new Date();
+var pessoaId = 178;
 
 var MODO_EDICAO = "MODO_EDICAO";
 var MODO_INCLUSAO = "MODO_INCLUSAO";
